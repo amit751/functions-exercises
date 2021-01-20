@@ -8,11 +8,26 @@ function myReverse(str) {
 }
 
 //Question 2
-function allCombinations(str) {
-  let combinations = [];
-  // your code here
+ 
 
-  //
+function allCombinations(str) {
+  
+//minor function
+  function print(str){
+    let out="";
+    for( let i=0 ; i< str.length; i++){
+        out+= str[i];
+        combinations.push(out);
+        
+    }
+  }
+  let combinations = [];
+  let work=str;
+    for(let i=0 ; i< str.length; i++){
+        work=str.slice(i);
+        print(work);
+    }
+
   return combinations;
 }
 
@@ -43,6 +58,8 @@ function isPrefectNumber(num) {
 // *** Playground ***
 // Feel free to run and test your code here on your own
 console.log( myReverse("aefrt"));
+console.log( 678);
+
 // *** End of Playground ***
 
 // Don't touch me :)
