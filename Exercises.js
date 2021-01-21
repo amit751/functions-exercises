@@ -33,8 +33,23 @@ function allCombinations(str) {
 
 //Question 3
 function allCaps(str) {
-  // your code here
-  return "";
+  let arr = str.split(" ");
+  arrUp = [];
+  for( let i=0 ; i< arr.length ; i++){
+    arrUp.push(firstUp(arr[i]));
+  }
+  
+  return arrUp.join(" ") ;
+  //minor function capitalize the firs letter  of a sring
+  function firstUp (str){
+    let up = str.slice(0, 1);
+    up = up.toUpperCase();
+    for( let i=1; i< str.length; i++){
+      up+=str[i];
+    }
+    return up;
+  }
+
 }
 
 //Question 4
