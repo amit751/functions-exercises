@@ -54,15 +54,31 @@ function allCaps(str) {
 
 //Question 4
 function myPower(x, n) {
-  // your code here
-  return "";
+  for(let i=0 ; i<n-1 ; i++ ){
+    x*=x
+
+  }
+  return x;
 }
 
 //Question 5
 function getFirstNotRepeating(str) {
-  // your code here
-  return "";
+  let arr = str.split("");
+  let check;
+  for( let i=0; i<arr.length ; i++){
+      check=arr.shift();
+      if(!arr.includes(check)){
+          arr.unshift(check);
+          return check;
+      
+      }else{
+          arr.push(check);
+      }
+  
+  }
+  // return "all letters repet";
 }
+  
 
 //Question 6 (Bonus)
 function isPrefectNumber(num) {
