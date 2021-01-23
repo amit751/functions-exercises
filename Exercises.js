@@ -82,14 +82,25 @@ function getFirstNotRepeating(str) {
 
 //Question 6 (Bonus)
 function isPrefectNumber(num) {
-  // your code here
-  return "I'm not interested in the bonus question :(";
+  let divisors=[];
+  for(let i =0 ; i<num ; i++){
+    if(num%i===0){
+      divisors.push(i);
+    }
+  }
+  let sum=0;
+  for (let j = 0; j < divisors.length; j++){
+    sum+=divisors[j];
+  }
+  return(sum===num);
+ 
+  
 }
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-console.log( myReverse("aefrt"));
-console.log( 678);
+console.log( isPrefectNumber(6));
+// console.log( 678);
 
 // *** End of Playground ***
 
